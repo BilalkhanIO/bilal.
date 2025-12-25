@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bilal Ahmad | Frontend Architect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Space Grotesk', 'sans-serif'],
+              mono: ['Fira Code', 'monospace'],
+            },
+            colors: {
+              primary: {
+                950: '#0f0503',
+                900: '#1a0a04',
+                800: '#2d0d05',
+                700: '#3d1006'
+              },
+              accent: {
+                red: '#FF3B30',
+                orange: '#FFA500',
+                yellow: '#FFD60A'
+              },
+              surface: {
+                800: 'rgba(255, 255, 255, 0.04)',
+                900: 'rgba(255, 255, 255, 0.02)'
+              }
+            },
+            animation: {
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'shimmer': 'shimmer 2s linear infinite',
+              'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+              shimmer: {
+                '0%': { backgroundPosition: '-1000px 0' },
+                '100%': { backgroundPosition: '1000px 0' }
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              }
+            },
+            boxShadow: {
+              'glow-orange': '0 0 40px rgba(255, 149, 0, 0.15)',
+              'glow-red': '0 0 40px rgba(255, 59, 48, 0.15)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        --gradient-hot: linear-gradient(135deg, #FF3B30 0%, #FF9500 50%, #FFD60A 100%);
+      }
+      body {
+        transition: background-color 0.5s ease, color 0.5s ease;
+        overflow-x: hidden;
+      }
+      
+      @media (pointer: fine) {
+        body {
+          cursor: none;
+        }
+        a, button, input, textarea, [role="button"] {
+          cursor: none;
+        }
+      }
+
+      .dark body {
+        background-color: #0f0503;
+        color: #e5e5e5;
+      }
+      html:not(.dark) body {
+        background-color: #fcfcfc;
+        color: #1a1a1a;
+      }
+      .text-gradient-hot {
+        background: var(--gradient-hot);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .bg-gradient-hot {
+        background: var(--gradient-hot);
+      }
+      .glass-panel {
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+      }
+      .dark .glass-panel {
+        background: rgba(26, 10, 4, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      html:not(.dark) .glass-panel {
+        background: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+      }
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb {
+        background: #3d1006;
+        border-radius: 10px;
+      }
+      .dark ::-webkit-scrollbar-thumb:hover { background: #FF3B30; }
+      
+      .selection-hot::selection {
+        background: #FF3B30;
+        color: white;
+      }
+
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* Custom easing for smooth transitions */
+      .ease-out-expo {
+        transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+      .preserve-3d {
+        transform-style: preserve-3d;
+      }
+    </style>
+
+  <link rel="stylesheet" href="/index.css">
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.0.0",
+    "react/": "https://esm.sh/react@19.0.0/",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/": "https://esm.sh/react-dom@19.0.0/",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "lucide-react": "https://esm.sh/lucide-react@0.474.0?external=react",
+    "recharts": "https://esm.sh/recharts@2.15.1?external=react,react-dom",
+    "gsap": "https://esm.sh/gsap@3.12.5",
+    "gsap/ScrollTrigger": "https://esm.sh/gsap@3.12.5/ScrollTrigger",
+    "gsap/": "https://esm.sh/gsap@^3.14.2/"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-Coj1HNAz.js"></script>
+</head>
+  <body class="selection-hot">
+    <div id="root"></div>
+</body>
+</html>
